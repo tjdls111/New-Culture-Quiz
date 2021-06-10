@@ -4,7 +4,8 @@
   "description": "근대문물 도입 퀴즈와 설명",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tjdls111/New-Culture-Quiz/issues"
   },
-  "homepage": "https://github.com/tjdls111/New-Culture-Quiz#readme"
+  "homepage": "https://github.com/tjdls111/New-Culture-Quiz#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
