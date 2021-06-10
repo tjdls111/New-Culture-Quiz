@@ -111,14 +111,16 @@ header{
 .close{
     position:absolute;
     top:10%;
-    right: 10%;
+    right: 15%;
 }
 
-#quiz-box_body{
+#quiz-box_body,.score-box_body{
     position:absolute;
     top:20%;
-    right: 10%;
+    margin:0 15%;
+
 }
+
 
 .quiz_answer, .quiz_submit{
     position:absolute;
