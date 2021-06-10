@@ -1,10 +1,23 @@
+:root{
+    --backgroundColor:#ccc0ae;
+    --buttonColor:#ddb09d;
+    --textColor:whitesmoke;
+
+    --mediumMargin:1em 1em;
+    --smallMargin:0.1em 0.3em;
+
+    --animationDuration:0.5s;
+
+}
+
+
 *{
     margin:0;
 
 }
 
 body{
-    background-color: #ccc0ae;
+    background-color: var(--backgroundColor);
 }
 
 
@@ -39,7 +52,18 @@ header{
 }
 
 .menu-one, .menu-two{
-    margin:1em 1em;
+    margin:var(--mediumMargin);
+    padding:var(--smallMargin);
+    background-color:var(--buttonColor) ;
+    color:var(--textColor);
+    cursor:pointer;
+    transition: var(--animationDuration) ;
+    
+
+}
+.menu-one:hover, .menu-two:hover{
+    transform: scale(1.1);
+
 
 }
 
