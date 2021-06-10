@@ -80,6 +80,8 @@ header{
     background-color:rgba(0, 0, 0, 0.1);
     border-radius: 40%;
 
+    
+    font-size:1.3em;
     text-align: center;
     margin:auto;
 
@@ -99,6 +101,7 @@ header{
     background-color:rgba(0, 0, 0, 0.1);
     border-radius: 10%;
 
+    font-size:1.3em;
     text-align: center;
     margin:auto;
 
@@ -106,6 +109,7 @@ header{
     top:45%;
     left:50%;
     transform:translate(-50%,-50%);
+
 }
 
 .close{
