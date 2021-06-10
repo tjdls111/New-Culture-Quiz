@@ -1,5 +1,5 @@
 import { clickBtn, quizs, quiz_num, addQuizNum } from "../button.js";
-import { rememberScore } from "../score.js";
+import { rememberScore, showScore } from "../score.js";
 export var main = document.querySelector('#game-zone');
 export var buttonStart = document.querySelector('.button-start');
 var Quiz = /** @class */ (function () {
@@ -10,16 +10,17 @@ var Quiz = /** @class */ (function () {
         var closeBtn = quizZone.querySelector('.close');
         closeBtn.onclick = function (event) {
             main === null || main === void 0 ? void 0 : main.removeChild(quizZone);
+            location.href = 'index.html';
         };
         var submitBtn = quizZone.querySelector('.quiz_submit');
         var userAnswer = quizZone.querySelector('.quiz_answer');
         submitBtn.onclick = function () {
             if (userAnswer.value == answer) {
                 rememberScore(true);
-                main === null || main === void 0 ? void 0 : main.removeChild(quizZone);
-                main === null || main === void 0 ? void 0 : main.classList.remove('quiz');
-                nextQuiz();
             }
+            main === null || main === void 0 ? void 0 : main.removeChild(quizZone);
+            main === null || main === void 0 ? void 0 : main.classList.remove('quiz');
+            finishCheck();
         };
     }
     return Quiz;
@@ -28,6 +29,14 @@ export { Quiz };
 function nextQuiz() {
     var quiz = new Quiz("" + quizs[quiz_num].quiz, "" + quizs[quiz_num].answer);
     addQuizNum();
+}
+function finishCheck() {
+    if (quiz_num == 3) {
+        showScore();
+    }
+    else {
+        nextQuiz();
+    }
 }
 var startButton = document.querySelector('main');
 startButton === null || startButton === void 0 ? void 0 : startButton.addEventListener('click', function (event) {
