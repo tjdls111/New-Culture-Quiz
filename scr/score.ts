@@ -13,7 +13,7 @@ export function showScore():void{
     const scoreZone=document.createElement('div');
     scoreZone.innerHTML=`<section class="score-box">
     <button class="close">&times;</button>
-    <div id="quiz-box_body">수고하셨어요~ 🥳<br> 세 문제 중 ${score}문제를 맞췄습니다! </div>
+    <div id="score-box_body">수고하셨어요~ 🥳<br> 세 문제 중 ${score}문제를 맞췄습니다! </div>
 </section>
     `;
     main?.appendChild(scoreZone);
