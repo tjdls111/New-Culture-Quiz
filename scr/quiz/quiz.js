@@ -1,4 +1,6 @@
-var main = document.querySelector('main');
+import { clickBtn } from "../button.js";
+export var main = document.querySelector('main');
+export var buttonStart = document.querySelector('.button-start');
 var Quiz = /** @class */ (function () {
     function Quiz(quiz) {
         var template = document.createElement('template');
@@ -14,7 +16,12 @@ var Quiz = /** @class */ (function () {
             
         };*/
         main === null || main === void 0 ? void 0 : main.appendChild(template);
+        console.log('quize');
     }
     return Quiz;
 }());
 export { Quiz };
+var startButton = document.querySelector('main');
+startButton === null || startButton === void 0 ? void 0 : startButton.addEventListener('click', function (event) {
+    clickBtn(event);
+});

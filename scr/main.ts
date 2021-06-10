@@ -10,4 +10,3 @@ menu?.addEventListener('click',(event:MouseEvent)=>{
    clickBtn(event);
 });
 
-const quiz=new Quiz('어쩌구 저쩌구');

@@ -1,6 +1,8 @@
-type html=null|HTMLElement;
-const main:html=document.querySelector('main');
+import { clickBtn } from "../button.js";
 
+type html=null|HTMLElement;
+export const main:html=document.querySelector('main');
+export const buttonStart:html=document.querySelector('.button-start');
 
 export class Quiz{
 
@@ -12,6 +14,8 @@ export class Quiz{
         <button class="quiz_submit">정답 확인하기</button>
     </section>
         `;
+  
+        
 
         /*const closeBtn=template.querySelector('.close')! as HTMLElement;
         closeBtn.onclick=()=>{
@@ -25,7 +29,21 @@ export class Quiz{
         };*/
 
         main?.appendChild(template);
+        console.log('quize');
+        
+
     }
 
 }
+
+
+
+
+const startButton:html=document.querySelector('main');
+
+
+startButton?.addEventListener('click',(event:MouseEvent)=>{
+   clickBtn(event);
+});
+
 
