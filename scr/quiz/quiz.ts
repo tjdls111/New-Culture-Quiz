@@ -1,21 +1,22 @@
 import { clickBtn } from "../button.js";
 
 type html=null|HTMLElement;
-export const main:html=document.querySelector('main');
+export const main:html=document.querySelector('#game-zone');
 export const buttonStart:html=document.querySelector('.button-start');
 
 export class Quiz{
 
     constructor(quiz:string){
-        const template=document.createElement('template');
-        template.innerHTML=`<section class="quiz-box">
+        const quizZone=document.createElement('div');
+        quizZone.innerHTML=`<section class="quiz-box">
         <button class="close">&times;</button>
         <div id="quiz-box_body">${quiz}</div>
         <button class="quiz_submit">정답 확인하기</button>
     </section>
         `;
   
-        
+        main?.appendChild(quizZone);
+        console.log('quize');
 
         /*const closeBtn=template.querySelector('.close')! as HTMLElement;
         closeBtn.onclick=()=>{
@@ -28,8 +29,7 @@ export class Quiz{
             
         };*/
 
-        main?.appendChild(template);
-        console.log('quize');
+
         
 
     }
