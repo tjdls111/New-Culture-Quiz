@@ -113,6 +113,8 @@ header{
 }
 
 .close{
+    cursor: pointer;
+    
     position:absolute;
     top:10%;
     right: 15%;
@@ -137,6 +139,7 @@ header{
 
 .quiz_submit{
     right:20%;
+    cursor: pointer;
 }
 
 .reference, .des{
@@ -155,6 +158,7 @@ footer{
     top:95%;
     left:50%;
 }
+
 .start{
     cursor: pointer;
     font-size: 4rem;
