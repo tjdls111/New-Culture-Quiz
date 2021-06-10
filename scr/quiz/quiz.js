@@ -1,4 +1,5 @@
-import { clickBtn } from "../button.js";
+import { clickBtn, quizs, quiz_num, addQuizNum } from "../button.js";
+import { rememberScore } from "../score.js";
 export var main = document.querySelector('#game-zone');
 export var buttonStart = document.querySelector('.button-start');
 var Quiz = /** @class */ (function () {
@@ -12,15 +13,22 @@ var Quiz = /** @class */ (function () {
         };
         var submitBtn = quizZone.querySelector('.quiz_submit');
         var userAnswer = quizZone.querySelector('.quiz_answer');
-        submitBtn.onclick = function (event) {
+        submitBtn.onclick = function () {
             if (userAnswer.value == answer) {
-                console.log("answer!");
+                rememberScore(true);
+                main === null || main === void 0 ? void 0 : main.removeChild(quizZone);
+                main === null || main === void 0 ? void 0 : main.classList.remove('quiz');
+                nextQuiz();
             }
         };
     }
     return Quiz;
 }());
 export { Quiz };
+function nextQuiz() {
+    var quiz = new Quiz("" + quizs[quiz_num].quiz, "" + quizs[quiz_num].answer);
+    addQuizNum();
+}
 var startButton = document.querySelector('main');
 startButton === null || startButton === void 0 ? void 0 : startButton.addEventListener('click', function (event) {
     clickBtn(event);

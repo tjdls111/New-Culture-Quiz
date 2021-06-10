@@ -1,5 +1,5 @@
 import { Quiz, main, buttonStart } from "./quiz/quiz.js";
-var quiz_num = 0;
+export var quiz_num = 0;
 export function clickBtn(event) {
     if (event.target) {
         if (event.target.className == 'menu-one') {
@@ -16,7 +16,10 @@ export function clickBtn(event) {
     }
     ;
 }
-var quizs = [
+export function addQuizNum() {
+    quiz_num++;
+}
+export var quizs = [
     {
         "quiz": "사람들은 하늘의 전기바람은 비구름을 말리고 땅의 이것은 땅 위의 물을 말린다.고 하네요. 사람들은 이것을 덕진풍, 전어기, 덕률풍이라고 부릅니다. 이 물건에서 나는 찌익찌익 소리를 듣고 귀신 들렸다면서 무서워하기도 했어요.",
         "answer": "전화기"

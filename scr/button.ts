@@ -1,6 +1,6 @@
 import {Quiz,main,buttonStart} from "./quiz/quiz.js";
 
-let quiz_num:number=0;
+export let quiz_num:number=0;
 
 export function clickBtn(event:MouseEvent){
         if (event.target){
@@ -18,7 +18,11 @@ export function clickBtn(event:MouseEvent){
         };
 }
 
-const quizs=
+export function addQuizNum(){
+    quiz_num++;
+}
+
+export const quizs=
 [
     {
 

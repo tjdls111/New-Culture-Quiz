@@ -1,4 +1,5 @@
-import { clickBtn } from "../button.js";
+import { clickBtn,quizs,quiz_num,addQuizNum } from "../button.js";
+import {rememberScore} from "../score.js";
 
 type html=null|HTMLElement;
 export const main:html=document.querySelector('#game-zone');
@@ -24,19 +25,23 @@ export class Quiz{
         };
 
         const submitBtn=quizZone.querySelector('.quiz_submit')! as HTMLElement;
-        const userAnswer=quizZone.querySelector('.quiz_answer')! as HTMLElement;
-        submitBtn.onclick=(event)=>{
+        const userAnswer=quizZone.querySelector('.quiz_answer')! as HTMLInputElement;
+        submitBtn.onclick=()=>{
             if(userAnswer.value==answer){
-                console.log("answer!");
-                
+                rememberScore(true);
+                main?.removeChild(quizZone);
+                main?.classList.remove('quiz');            
+                nextQuiz();
             }
-            
         }
-        
-        
-
     }
 
+}
+
+function nextQuiz(){
+    
+    const quiz=new Quiz(`${quizs[quiz_num].quiz}`,`${quizs[quiz_num].answer}`);
+    addQuizNum();
 }
 
 
