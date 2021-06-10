@@ -33,3 +33,4 @@ export var quizs = [
         "answer": "전기"
     }
 ];
+export var quizNumber = quizs.length;

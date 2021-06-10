@@ -1,3 +1,4 @@
+import { quizNumber } from './../button.js';
 import { clickBtn, quizs, quiz_num, addQuizNum } from "../button.js";
 import { rememberScore, showScore } from "../score.js";
 export var main = document.querySelector('#game-zone');
@@ -37,7 +38,7 @@ function nextQuiz() {
     addQuizNum();
 }
 function finishCheck() {
-    if (quiz_num == 3) {
+    if (quiz_num === quizNumber) {
         showScore();
     }
     else {

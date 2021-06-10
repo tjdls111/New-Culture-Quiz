@@ -1,10 +1,13 @@
+import { quizNumber } from './../button.js';
 import { clickBtn,quizs,quiz_num,addQuizNum } from "../button.js";
 import {rememberScore, showScore} from "../score.js";
 
+
+
 type html=null|HTMLElement;
+
 export const main:html=document.querySelector('#game-zone');
 export const buttonStart:html=document.querySelector('.button-start');
-
 export class Quiz{
 
     constructor(quiz:string,answer:string){
@@ -57,7 +60,7 @@ function nextQuiz(){
 }
 
 function finishCheck(){
-    if (quiz_num==3){
+    if (quiz_num===quizNumber){
         showScore();
     }
     else{

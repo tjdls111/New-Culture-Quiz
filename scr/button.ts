@@ -22,6 +22,8 @@ export function addQuizNum(){
     quiz_num++;
 }
 
+
+
 export const quizs=
 [
     {
@@ -41,4 +43,6 @@ export const quizs=
         "answer":"전기"
     }
 
-]
+];
+
+export const quizNumber:number=quizs.length;
