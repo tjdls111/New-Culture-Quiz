@@ -21,5 +21,6 @@ export function showScore():void{
     const closeBtn=scoreZone.querySelector('.close')! as HTMLElement;
         closeBtn.onclick=(event)=>{
             main?.removeChild(scoreZone);
+            location.href='index.html';
         };
 }

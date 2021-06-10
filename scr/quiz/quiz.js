@@ -14,13 +14,19 @@ var Quiz = /** @class */ (function () {
         };
         var submitBtn = quizZone.querySelector('.quiz_submit');
         var userAnswer = quizZone.querySelector('.quiz_answer');
+        var quizZone_quiz = quizZone.querySelector('#quiz-box_body');
         submitBtn.onclick = function () {
             if (userAnswer.value == answer) {
                 rememberScore(true);
             }
-            main === null || main === void 0 ? void 0 : main.removeChild(quizZone);
-            main === null || main === void 0 ? void 0 : main.classList.remove('quiz');
-            finishCheck();
+            submitBtn.setAttribute('style', 'display:none');
+            userAnswer.setAttribute('style', 'display:none');
+            quizZone_quiz.innerText = "\uC815\uB2F5\uC740 " + answer + "\uC785\uB2C8\uB2E4.";
+            closeBtn.onclick = function (event) {
+                main === null || main === void 0 ? void 0 : main.removeChild(quizZone);
+                main === null || main === void 0 ? void 0 : main.classList.remove('quiz');
+                finishCheck();
+            };
         };
     }
     return Quiz;

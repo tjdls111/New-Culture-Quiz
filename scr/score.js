@@ -12,5 +12,6 @@ export function showScore() {
     var closeBtn = scoreZone.querySelector('.close');
     closeBtn.onclick = function (event) {
         main === null || main === void 0 ? void 0 : main.removeChild(scoreZone);
+        location.href = 'index.html';
     };
 }

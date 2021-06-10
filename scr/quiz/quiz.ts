@@ -27,13 +27,25 @@ export class Quiz{
 
         const submitBtn=quizZone.querySelector('.quiz_submit')! as HTMLElement;
         const userAnswer=quizZone.querySelector('.quiz_answer')! as HTMLInputElement;
+        const quizZone_quiz=quizZone.querySelector('#quiz-box_body')! as HTMLElement;
+        
         submitBtn.onclick=()=>{
             if(userAnswer.value==answer){
                 rememberScore(true);
             }
-            main?.removeChild(quizZone);
-            main?.classList.remove('quiz');            
-            finishCheck();
+
+            submitBtn.setAttribute('style','display:none');
+            userAnswer.setAttribute('style','display:none');
+            quizZone_quiz.innerText=`정답은 ${answer}입니다.`;
+
+            closeBtn.onclick=(event)=>{
+                main?.removeChild(quizZone);
+                main?.classList.remove('quiz');            
+                finishCheck();
+            };
+
+
+           
         }
     }
 
