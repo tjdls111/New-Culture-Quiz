@@ -6,7 +6,7 @@ export const buttonStart:html=document.querySelector('.button-start');
 
 export class Quiz{
 
-    constructor(quiz:string){
+    constructor(quiz:string,answer:string){
         const quizZone=document.createElement('div');
         quizZone.innerHTML=`<section class="quiz-box">
         <button class="close">&times;</button>
@@ -24,10 +24,11 @@ export class Quiz{
         };
 
         const submitBtn=quizZone.querySelector('.quiz_submit')! as HTMLElement;
-        const answer=quizZone.querySelector('.quiz_answer')! as HTMLElement;
+        const userAnswer=quizZone.querySelector('.quiz_answer')! as HTMLElement;
         submitBtn.onclick=(event)=>{
-            if(answer.value=="정답"){
-                main?.appendChild(quizZone);
+            if(userAnswer.value==answer){
+                console.log("answer!");
+                
             }
             
         }
