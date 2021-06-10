@@ -4,18 +4,28 @@
 }
 
 body{
-    
+    background-color: #ccc0ae;
 }
 
 
 .main-box{
-    height:1000px;
+
+    width:800px;
+    height:100px;
+    position:absolute;
+    left:20%;
+    top:20%;
+    margin-left:-50px;
+    margin-top:-50px;
+    
+    height:500px;
+
+
     background-position: center;
     background-repeat:no-repeat;
     background-size:auto;
-    position:relative;
     background-image:url('/image/img2.png');
-    
+  
 }
 
 header{
@@ -29,17 +39,15 @@ header{
 }
 
 .menu-one, .menu-two{
-    margin-left: 1em;
-    margin-right:1em;
+    margin:1em 1em;
+
 }
 
 .logo{
-    margin-left:1em;
+   margin:1em 1em;
 }
 
-footer{
-    text-align: center;
-}
+
 
 .small-box{
     height: 10em;
@@ -51,4 +59,11 @@ footer{
     left:50%;
     transform:translate(-50%,-50%);
     
+}
+
+footer{
+    text-align: center;
+    position: absolute;
+    top:95%;
+    left:50%;
 }
