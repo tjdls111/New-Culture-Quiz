@@ -55,13 +55,14 @@ header{
     margin:var(--mediumMargin);
     padding:var(--smallMargin);
     background-color:var(--buttonColor) ;
+    font-size: 1.2rem;
     color:var(--textColor);
     cursor:pointer;
     transition: var(--animationDuration) ;
     
 
 }
-.menu-one:hover, .menu-two:hover{
+.menu-one:hover, .menu-two:hover, .start:hover{
     transform: scale(1.1);
 
 
@@ -122,4 +123,23 @@ footer{
     position: absolute;
     top:95%;
     left:50%;
+}
+.start{
+    cursor: pointer;
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20%;
+    background-color: var(--buttonColor);
+    color:var(--textColor);
+    border: none;
+
+}
+
+.button-start{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
 }
