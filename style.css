@@ -77,14 +77,34 @@ header{
     height: 10em;
     width: 25em;
     background-color:rgba(0, 0, 0, 0.1);
-    
-    text-align: center;
+    border-radius: 40%;
 
+    text-align: center;
+    margin:auto;
+
+    padding-top: 2em;
+  
     position: absolute;
     top:40%;
     left:50%;
     transform:translate(-50%,-50%);
     
+}
+
+
+.quiz-box{
+    height: 70%;
+    width: 60%;
+    background-color:rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+
+    text-align: center;
+    margin:auto;
+
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
 }
 
 .reference, .des{
