@@ -7,6 +7,8 @@
     <title>개화기 조선으로 시간 여행</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./scr/main.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
         </style>
@@ -15,6 +17,11 @@
     <div class='main-box'>
         <header>
             <div class='logo'>개화기 조선으로 시간 여행</div>
+            <b><p>지금 시각은 <u><label id='now'></label></u> 입니다^^</p></b>
+            <py-script>
+                import datetime as dt
+                pyscript.write('now', dt.datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'))    
+            </py-script>
             <div class='menu'>
                 <div class='menu-one'>안내</div>
                 <div class='menu-two'>퀴즈</div>
