@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>개화기 조선으로 시간 여행</title>
-    <link rel="stylesheet" href="style.css">
-    <script type='module' src="./scr/main.js" ></script>
-
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./scr/main.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
-        </style>
-</head>
-<body>
-    <div class='main-box'>
-        <header>
-            <div class='logo'>개화기 조선으로 시간 여행</div>
-            <div class='menu'>
-                <div class='menu-one'>안내</div>
-                <div class='menu-two'>퀴즈</div>
-            </div>
-        </header>
-        <main>
-            <div class="small-box">
-                      <h1>개화기 조선으로 시간 여행!<br>
-                        근대문물 퀴즈를 풀어봐요 ~</h1>              
-            </div>
-        </main> 
+      @import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+      <header>
+        <div class="logo">개화기 조선으로 시간 여행</div>
+        <div>
+            <b><p>오늘은 <u><label id='today'></label></u></p></b>
+            <py-script>
+                import datetime as dt
+                pyscript.write('today', dt.date.today().strftime('%a %b %d, %Y'))    
+            </py-script>
+        </div>
+        <div class="menu">
+          <div class="menu-one">안내</div>
+          <div class="menu-two">퀴즈</div>
+        </div>
+      </header>
+      <main>
+        <div class="small-box">
+          <h1>
+            개화기 조선으로 시간 여행!<br />
+            근대문물 퀴즈를 풀어봐요 ~
+          </h1>
+        </div>
+      </main>
     </div>
 
     <footer>Made by tjdls111</footer>
-</body>
+  </body>
 </html>
